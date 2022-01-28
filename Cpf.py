@@ -3,20 +3,19 @@ from validate_docbr import CPF
 
 class Cpf:
     def __init__(self, documento):
-        documento = str(documento)
-        if self.valida_cpf(documento):
+        if self.valida(documento):
             self.cpf = documento
         else:
             raise ValueError("CPF Inválido!")
 
-    def valida_cpf(self, documento):
+    def valida(self, documento):
         if len(documento) == 11:
             validator = CPF()
             return validator.validate(documento)
         else:
             raise ValueError("Quantidade de digitos inválida!")
 
-    def formata_cpf(self):
+    def formata(self):
         cpf = CPF()
         return cpf.mask(self.cpf)
         """fatia_um = self.cpf[:3]
@@ -29,5 +28,7 @@ class Cpf:
                                     fatia_tres,
                                     fatia_quatro))
         """
+
     def __str__(self):
-        return self.formata_cpf()
+        return self.formata()
+
