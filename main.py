@@ -23,6 +23,27 @@ texto = "teste.teste23@gmail.com sgsdfsdfsdfsdfgsdgsd"
 resposta = re.search(padrao, texto)
 print(resposta.group())
 
+#+xxx(xx)xxxxx-xxxx
+telefone = "(11)992409317"
+telefone_testa = TelefonesBr(telefone)
+print(telefone_testa)
 
-telefone = "5566514685142"
-telefone_objeto = TelefonesBr(telefone)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
