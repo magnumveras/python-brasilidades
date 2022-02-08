@@ -3,6 +3,7 @@
 from Documentos import Documento
 import re
 from TelefonesBr import TelefonesBr
+from datetime import datetime, timedelta
 
 novo_cpf = Documento.cria_documento("23013646829")
 print(novo_cpf)
@@ -28,13 +29,15 @@ telefone = "(11)992409317"
 telefone_testa = TelefonesBr(telefone)
 print(telefone_testa)
 
+#Utilização da Classe DateTime
+print(datetime.today())
 
 
-
-
-
-
-
+from datas_br import Datas_Br
+cadastro = Datas_Br()
+print(cadastro.momento_cadastro)
+print(cadastro.dias_semana())
+print(cadastro.mes_cadastro())
 
 
 
