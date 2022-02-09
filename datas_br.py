@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class Datas_Br:
     def __init__(self):
@@ -21,6 +21,9 @@ class Datas_Br:
 
     def data_formatada(self):
         return self.momento_cadastro.strftime("%d/%m/%Y")
+
+    def data_cadastro(self):
+        return (datetime.today() + timedelta(days=30, weeks=2, hours=8)) - self.momento_cadastro
 
     def __str__(self):
         return self.data_formatada()
