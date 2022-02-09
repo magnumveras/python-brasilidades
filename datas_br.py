@@ -18,3 +18,9 @@ class Datas_Br:
         dias_semana = ["Segunda-Feira", "Terça-Feira", "Quarta-Feira"
                         "Quinta-Feira", "Sexta-Feira", "Sábado", "Domingo"]
         return dias_semana[self.momento_cadastro.weekday()]
+
+    def data_formatada(self):
+        return self.momento_cadastro.strftime("%d/%m/%Y")
+
+    def __str__(self):
+        return self.data_formatada()

@@ -38,9 +38,7 @@ cadastro = Datas_Br()
 print(cadastro.momento_cadastro)
 print(cadastro.dias_semana())
 print(cadastro.mes_cadastro())
-
-
-
+print(cadastro)
 
 
 
