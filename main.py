@@ -41,8 +41,23 @@ print(cadastro.mes_cadastro())
 print(cadastro)
 print(cadastro.data_cadastro())
 
+from acesso_cep import BuscaEndereco
 
+cep = "01001000"
+objeto_cep = BuscaEndereco(cep)
+print(objeto_cep)
 
+import requests
+
+#r = requests.get("https://viacep.com.br/ws/01001000/json/")
+#print(r)
+
+a = objeto_cep.acessa_via_cep()
+print(type(a))
+print(dir(a))
+
+Bairro, Cidade, Estado = objeto_cep.acessa_via_cep()
+print(Bairro, Cidade, Estado)
 
 
 
